@@ -6,7 +6,7 @@ pipeline {
         echo '"Hello"'
         bat(script: 'echo "hello"', returnStdout: true, returnStatus: true)
         bat 'echo "hello world"'
-        py 'print "hello"'
+        bat 'python --version'
         catchError(buildResult: 'success', message: 'success') {
           timestamps() {
             echo 'hello'
