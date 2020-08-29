@@ -4,7 +4,13 @@ pipeline{
   environment {
   MYENV="TEST pipepline"
   }
-  
+  stages {
+    stage('pre Build ') {
+      steps {
+      myvar =readMyenv()
+      echo $myvar
+      }
+    }
   stages {
     stage('Build ') {
       steps {
@@ -15,14 +21,8 @@ pipeline{
     }
     stage('Test') {
       steps {
-        step {
           echo "Test step 1"
           echo "Test step 2"
-          }
-        step {
-        myen1=readMyenv()
-        echo "${myenv1}"
-        }
       }
     }
     stage('Deploy') {
