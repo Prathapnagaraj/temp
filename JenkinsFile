@@ -37,12 +37,16 @@ pipeline{
           }
         }
         stage('Code coverage')
-        {
-          echo 'running code coverage'
+        { 
+          steps {
+            echo 'running code coverage'
+            }
         }
         stage('Code quality runs')
         {
-          echo 'running code coverage'
+          steps {
+            echo 'running code coverage'
+            }
         }
       }
     }
