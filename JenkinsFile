@@ -13,6 +13,7 @@ pipeline{
         echo "Build step 1"
         echo "${env.BUILD_ID}"
         echo "Build step 2"
+        echo "parameter flag is ${params.flag}"
       }
     }
     stage('Test') {
