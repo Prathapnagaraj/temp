@@ -4,6 +4,7 @@ pipeline{
   environment {
   MYENV="TEST pipepline"
   }
+
   stages {
     stage('pre Build ') {
       steps {
@@ -11,7 +12,6 @@ pipeline{
       echo $myvar
       }
     }
-  stages {
     stage('Build ') {
       steps {
         echo "${MYENV}"
