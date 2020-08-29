@@ -3,6 +3,7 @@ pipeline{
   agent any
   options {
     retry(1)
+    timestamps()
   }
   triggers {
     pollSCM('* * * * *')
@@ -34,7 +35,6 @@ pipeline{
     }
     stage('Deploy') {
       steps {
-        echo "Mylang = ${CC}"
         echo "Deploy step 1 "
         echo "Deploy step 2"
       }
