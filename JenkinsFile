@@ -4,6 +4,7 @@ pipeline{
   options {
     retry(1)
     timestamps()
+    disableConcurrentBuilds()
   }
   triggers {
     pollSCM('* * * * *')
