@@ -25,6 +25,7 @@ pipeline{
       }
     }
     stage('Post build stages') {
+      failFast true
       parallel {
         stage('Unit Test') {
           environment {
