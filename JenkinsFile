@@ -24,20 +24,39 @@ pipeline{
         echo "parameter flag is ${params.flag}"
       }
     }
-    stage('Test') {
-      environment {
-      CC = "Mylang"
-      }
-      steps {
-          echo "Mylang = ${CC}"
-          echo "Test step 1"
-          echo "Test step 2"
+    stage {
+      parallel {
+        stage('Unit Test') {
+          environment {
+            CC = "Mylang"
+          }
+          steps {
+            echo "Mylang = ${CC}"
+            echo "Test step 1"
+            echo "Test step 2"
+          }
+        }
+        stage('Code coverage')
+        {
+          echo 'running code coverage'
+        }
+        stage('Code quality runs')
+        {
+          echo 'running code coverage'
+        }
       }
     }
+    
     stage('Deploy') {
       steps {
         echo "Deploy step 1 "
         echo "Deploy step 2"
+      }
+    }
+    stage('Testing') {
+      steps {
+        echo "Testing step 1 "
+        echo "Testing step 2"
       }
     }
     stage('release') {
