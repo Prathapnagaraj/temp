@@ -1,4 +1,4 @@
-currentBuild.displayName = env.JOB_NAME+env.BRANCH_NAME+currentBuild.number
+currentBuild.displayName = env.JOB_NAME+env.BRANCH_NAME+currentBuild.displayName
 pipeline{
   agent any
   environment {
