@@ -20,13 +20,18 @@ pipeline{
       }
     }
     stage('Test') {
+      environmnet {
+      CC = "Mylang"
+      }
       steps {
+          echo "Mylang = ${Mylang}"
           echo "Test step 1"
           echo "Test step 2"
       }
     }
     stage('Deploy') {
       steps {
+        echo "Mylang = ${Mylang}"
         echo "Deploy step 1"
         echo "Deploy step 2"
       }
