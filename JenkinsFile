@@ -17,7 +17,7 @@ pipeline{
       steps {
         echo "Test step 1"
         echo "Test step 2"
-        def myen1=readMyenv()
+        myen1=readMyenv()
         echo "${myenv1}"
       }
     }
@@ -31,6 +31,6 @@ pipeline{
 }
 
 def readMyenv() {
-  Myenv="${MYENV}"
+  def Myenv="${MYENV}"
   return Myenv
 }
