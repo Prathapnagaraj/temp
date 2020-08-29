@@ -15,10 +15,14 @@ pipeline{
     }
     stage('Test') {
       steps {
-        echo "Test step 1"
-        echo "Test step 2"
+        step {
+          echo "Test step 1"
+          echo "Test step 2"
+          }
+        step {
         myen1=readMyenv()
         echo "${myenv1}"
+        }
       }
     }
     stage('Deploy') {
