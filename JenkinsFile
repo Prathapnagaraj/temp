@@ -1,4 +1,4 @@
-currentBuild.displayName = "Myjob"+currentBuild.number
+currentBuild.displayName = env.JOB_NAME+env.BRANCH_NAME+currentBuild.number
 pipeline{
   agent any
   environment {
@@ -9,7 +9,9 @@ pipeline{
     stage('Build ') {
       steps {
         echo "${MYENV}"
+        echo "${env.PATH}"
         echo "Build step 1"
+        echo "${env.BUILD_ID}"
         echo "Build step 2"
       }
     }
