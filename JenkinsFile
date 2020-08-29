@@ -42,7 +42,7 @@ pipeline{
     }
     stage('release') {
       when {
-      params.releas 'true'
+      "${params.release}" 'true'
       }
      // input {
      // message "Should we continue?"
