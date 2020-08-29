@@ -6,16 +6,6 @@ pipeline{
   }
 
   stages {
-    stage('pre Build ') {
-      steps {
-        step {
-          myvar =readMyenv()
-        }
-        step {
-          echo $myvar
-        }
-      }
-    }
     stage('Build ') {
       steps {
         echo "${MYENV}"
