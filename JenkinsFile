@@ -20,7 +20,7 @@ pipeline{
       }
     }
     stage('Test') {
-      environmnet {
+      environment {
       CC = "Mylang"
       }
       steps {
