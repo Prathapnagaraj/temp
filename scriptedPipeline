@@ -1,0 +1,10 @@
+node {
+  stage('Example') {
+    if (env.BRANCH_NAME == 'master') {
+      echo "running on master branch"
+    }
+    else {
+      echo "Running on non master branch"
+    }
+  }
+}
