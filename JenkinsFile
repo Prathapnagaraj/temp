@@ -24,7 +24,7 @@ pipeline{
         echo "parameter flag is ${params.flag}"
       }
     }
-    stages {
+    stage('Post build stages') {
       parallel {
         stage('Unit Test') {
           environment {
