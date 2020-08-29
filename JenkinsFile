@@ -8,7 +8,7 @@ pipeline{
   stages {
     stage('Build ') {
       steps {
-        echo ${MYENV}
+        echo "${MYENV}"
         echo "Build step 1"
         echo "Build step 2"
       }
@@ -18,7 +18,7 @@ pipeline{
         echo "Test step 1"
         echo "Test step 2"
         def myen1=readMyenv()
-        echo ${myenv1}
+        echo "${myenv1}"
       }
     }
     stage('Deploy') {
@@ -31,6 +31,6 @@ pipeline{
 }
 
 def readMyenv() {
-  Myenv=${MYENV}
+  Myenv="${MYENV}"
   return Myenv
 }
