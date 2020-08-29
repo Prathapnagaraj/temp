@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo '"Hello"'
         bat(script: 'echo "hello"', returnStdout: true, returnStatus: true)
+        bat 'echo "hello world"'
         catchError(buildResult: 'success', message: 'success') {
           timestamps() {
             echo 'hello'
