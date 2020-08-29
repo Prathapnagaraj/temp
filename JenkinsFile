@@ -31,7 +31,6 @@ pipeline{
     }
     stage('Deploy') {
       steps {
-        echo "Mylang = ${Mylang}"
         echo "Deploy step 1"
         echo "Deploy step 2"
       }
