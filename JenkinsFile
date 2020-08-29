@@ -2,7 +2,7 @@ currentBuild.displayName = env.JOB_NAME+env.BRANCH_NAME+currentBuild.displayName
 pipeline{
   agent any
   options {
-    retry(3)
+    retry(1)
   }
   triggers {
     pollSCM('* * * * *')
@@ -34,6 +34,7 @@ pipeline{
     }
     stage('Deploy') {
       steps {
+        echo "Mylang = ${CC}"
         echo "Deploy step 1 "
         echo "Deploy step 2"
       }
