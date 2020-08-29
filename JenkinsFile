@@ -24,7 +24,6 @@ pipeline{
         echo "parameter flag is ${params.flag}"
       }
     }
-    stage {
       parallel {
         stage('Unit Test') {
           environment {
@@ -45,7 +44,7 @@ pipeline{
           echo 'running code coverage'
         }
       }
-    }
+    
     
     stage('Deploy') {
       steps {
