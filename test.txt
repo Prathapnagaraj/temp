@@ -1,0 +1,13 @@
+ Volume in drive D has no label.
+ Volume Serial Number is 4298-CF2B
+
+ Directory of D:\myjenkins\temp\temp
+
+31-08-2020  18:37    <DIR>          .
+31-08-2020  18:37    <DIR>          ..
+31-08-2020  18:24                 7 hello
+31-08-2020  18:22               499 Jenkinsfile
+31-08-2020  18:22               176 scriptedPipeline
+31-08-2020  18:37                 0 test.txt
+               4 File(s)            682 bytes
+               2 Dir(s)  334,602,399,744 bytes free
