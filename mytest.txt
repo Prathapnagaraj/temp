@@ -1,0 +1,14 @@
+ Volume in drive D has no label.
+ Volume Serial Number is 4298-CF2B
+
+ Directory of D:\tmp\temp\temp
+
+31-08-2020  19:08    <DIR>          .
+31-08-2020  19:08    <DIR>          ..
+31-08-2020  19:05                 6 hello
+31-08-2020  19:00               499 Jenkinsfile
+31-08-2020  19:08                 0 mytest.txt
+31-08-2020  19:00               176 scriptedPipeline
+31-08-2020  19:05               483 test.txt
+               5 File(s)          1,164 bytes
+               2 Dir(s)  334,602,387,456 bytes free
