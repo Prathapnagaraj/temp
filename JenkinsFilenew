@@ -1,0 +1,88 @@
+currentBuild.displayName = env.JOB_NAME+env.BRANCH_NAME+currentBuild.displayName
+pipeline{
+  agent any
+  options {
+    retry(1)
+    timestamps()
+    disableConcurrentBuilds()
+  }
+  triggers {
+    pollSCM('* * * * *')
+  }
+  environment {
+  MYENV="TEST pipepline"
+  }
+
+  stages {
+    stage('Build ') {
+      steps {
+        echo "${MYENV}"
+        echo "${env.PATH}"
+        echo "Build step 1"
+        echo "${env.BUILD_ID}"
+        echo "Build step 2"
+        echo "parameter flag is ${params.flag}"
+      }
+    }
+    stage('Post build stages') {
+      failFast true
+      parallel {
+        stage('Unit Test') {
+          environment {
+            CC = "Mylang"
+          }
+          steps {
+            echo "Mylang = ${CC}"
+            echo "Test step 1"
+            echo "Test step 2"
+          }
+        }
+        stage('Code coverage')
+        { 
+          steps {
+            echo 'running code coverage'
+            }
+        }
+        stage('Code quality runs')
+        {
+          steps {
+            echo 'running code coverage'
+            }
+        }
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo "Deploy step 1 "
+        echo "Deploy step 2"
+      }
+    }
+    stage('Testing') {
+      steps {
+        echo "Testing step 1 "
+        echo "Testing step 2"
+      }
+    }
+    stage('release') {
+      when {
+      expression { "${params.release}" == 'true' }
+      }
+     // input {
+     // message "Should we continue?"
+     //           ok "Yes, we should."
+     //           parameters {
+     //               string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+     //           }
+     //       }
+      steps {
+        echo "release step 1 "
+        echo "release step 2"
+      }
+    }
+  }
+}
+
+def readMyenv() {
+  def Myenv="${MYENV}"
+  return Myenv
+}
