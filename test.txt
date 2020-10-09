@@ -3,13 +3,13 @@
 
  Directory of D:\tmp\temp
 
-09-10-2020  11:58    <DIR>          .
-09-10-2020  11:58    <DIR>          ..
+09-10-2020  12:02    <DIR>          .
+09-10-2020  12:02    <DIR>          ..
 09-10-2020  10:50                 7 hello
 09-10-2020  11:02             1,824 Jenkinsfile
 09-10-2020  11:02             1,824 JenkinsFilenew
 09-10-2020  10:50               525 mytest.txt
 09-10-2020  10:50               176 scriptedPipeline
-09-10-2020  11:59                 0 test.txt
+09-10-2020  12:06                 0 test.txt
                6 File(s)          4,356 bytes
-               2 Dir(s)  327,002,853,376 bytes free
+               2 Dir(s)  327,002,845,184 bytes free
